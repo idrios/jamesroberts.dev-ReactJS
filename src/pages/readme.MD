@@ -1,1 +1,0 @@
-Use this folder to load the pages that you don't want to be eagerly loaded -- e.g. blog entries

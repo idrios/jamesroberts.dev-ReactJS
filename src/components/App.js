@@ -1,12 +1,16 @@
 import React, { Component } from 'react'; 
-import { Button } from 'react-bootstrap'; 
+import { Router, Route, Link } from 'react-router-dom'; 
+import Main from './Layout/Main'; 
+import Header from './Layout/Header'; 
+import Home from './Pages/Home';
+import About from './Pages/About';
 
 class App extends Component {
     render() {
         return (
             <div>
-                <h1>JamesRoberts.dev</h1>
-                <Button>Bootstrap button</Button>
+                <Header/>
+                <Main/>
             </div>
         ); 
     }
