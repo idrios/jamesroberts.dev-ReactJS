@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 import { Router, Route, Link } from 'react-router-dom'; 
-import Main from './Layout/Main'; 
+import Main from './Main'; 
 import Header from './Layout/Header'; 
 import Home from './Pages/Home';
 import About from './Pages/About';
