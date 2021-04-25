@@ -1,15 +1,15 @@
 import React, { Component } from 'react'; 
 import Header from '../Layout/Header'; 
 
-class Home extends Component {
+class FourZeroFour extends Component {
     render(){
         return (
             <>
-                <Header src="home"/>
-                <h1>Home page!</h1>
+                <Header/>
+                <h1>You found the 404 page! Congratulations!</h1>
             </>
         )
     }
 }
 
-export default Home;
+export default FourZeroFour; 
