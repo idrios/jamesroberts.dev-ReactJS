@@ -22,6 +22,11 @@ module.exports = {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 use: ["style-loader", "css-loader"]
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/, 
+                exclude: /node_modules/,
+                loader: 'file-loader'
             }
         ]
     }, 

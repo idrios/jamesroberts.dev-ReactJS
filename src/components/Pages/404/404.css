@@ -1,0 +1,9 @@
+.page-content {
+    width: 100%; 
+
+}
+.page-center-content {
+    max-width: 800px;
+    margin: auto;
+    flex-direction: column;
+}
