@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
 import Home from './Pages/Home';
 import About from './Pages/About';
-import FourZeroFour from './Pages/404'; 
+import FourZeroFour from './Pages/404/404'; 
 
 class App extends Component {
     render() {
