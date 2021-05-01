@@ -1,16 +1,23 @@
 import React, { Component } from 'react'; 
 import { Link } from 'react-router-dom'; 
 import { Button, TextField } from '@material-ui/core'; 
+import { PAGE_NAMES } from '../../../res/constants/constants'; 
 
 import './Header.css'; 
 
 class Header extends Component {
-    constructor() {
-        super(); 
+    constructor(props) {
+        super(props);
+        this.visible = this.props.visible; 
+        this.pageSrc = this.props.pageSrc;  
+        console.log(props); 
     }
 
     render(){
-        return (
+        console.log(this.pageSrc); 
+        return !this.visible 
+            ? <></>
+            : (
             <div className="header">
                 <div className="header-content-top large-screen-hidden">
                     <h1>JamesRoberts.dev</h1>
@@ -18,20 +25,20 @@ class Header extends Component {
                 <div className="header-content-bottom">
                     <div className="header-content-left">
                         <Button component={ Link } to="/home" 
-                            color={this.props.src==="home" ? "primary" : "default"}
-                            variant={this.props.src==="home" ? "contained" : "default"}
+                            color={this.pageSrc===PAGE_NAMES.HOME ? "primary" : "default"}
+                            variant={this.pageSrc===PAGE_NAMES.HOME ? "contained" : "text"}
                             >Home</Button>
                         <Button component={ Link } to="/posts"
-                            color={this.props.src==="posts" ? "primary" : "default"}
-                            variant={this.props.src==="posts" ? "contained" : "default"}
+                            color={this.pageSrc===PAGE_NAMES.POSTS ? "primary" : "default"}
+                            variant={this.pageSrc===PAGE_NAMES.POSTS ? "contained" : "text"}
                             >Posts</Button>
                         <Button component={ Link } to="/demos"
-                            color={this.props.src==="demos" ? "primary" : "default"}
-                            variant={this.props.src==="demos" ? "contained" : "default"}
+                            color={this.pageSrc===PAGE_NAMES.DEMOS ? "primary" : "default"}
+                            variant={this.pageSrc===PAGE_NAMES.DEMOS ? "contained" : "text"}
                             >Demos</Button>
                         <Button component={ Link } to="/about"
-                            color={this.props.src==="about" ? "primary" : "default"}
-                            variant={this.props.src==="about" ? "contained" : "default"}
+                            color={this.pageSrc===PAGE_NAMES.ABOUT ? "primary" : "default"}
+                            variant={this.pageSrc===PAGE_NAMES.ABOUT ? "contained" : "text"}
                             >About</Button>
                     </div>
                     <div className="header-content-center small-screen-hidden">

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'; 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
-import Home from './Pages/Home/Home';
-import About from './Pages/About/About';
-import FourZeroFour from './Pages/404/404'; 
+import { Home, About, FourZeroFour } from './Pages/Pages'; 
 
 class App extends Component {
     render() {
