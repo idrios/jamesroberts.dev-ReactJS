@@ -9,3 +9,8 @@
 .page-content {
     width: 100%;
 }
+
+.page-content-body {
+    max-width: 800px;
+    margin: auto;
+}

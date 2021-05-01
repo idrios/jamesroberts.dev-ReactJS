@@ -10,7 +10,7 @@ class AboutPage extends Page {
         this.showFooter = true; 
         this.pageName = PAGE_NAMES.ABOUT;
     }
-    renderContent(){
+    renderContentBody(){
         return (
             <div>
                 <h1>About Page!</h1>

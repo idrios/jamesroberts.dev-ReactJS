@@ -10,7 +10,7 @@ class HomePage extends Page {
         this.showFooter = true; 
         this.pageName = PAGE_NAMES.HOME;
     }
-    renderContent(){
+    renderContentBody(){
         return (            
             <h1>Home page!</h1>
         )
