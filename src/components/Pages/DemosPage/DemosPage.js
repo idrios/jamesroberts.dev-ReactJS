@@ -3,21 +3,21 @@ import React from 'react';
 import Page from '../Page/Page';
 import { PAGE_NAMES } from '../../../res/constants/constants';  
 
-class AboutPage extends Page {
+class DemosPage extends Page {
     constructor(props){
         super(props)
         this.showHeader = true; 
         this.showFooter = true; 
-        this.pageName = PAGE_NAMES.ABOUT;
+        this.pageName = PAGE_NAMES.DEMOS;
     }
     renderContentBody(){
         return (
             <>
-                <h1>About Page!</h1>
-                <p>This is the about page!</p>
+                <h1>Demos Page!</h1>
+                <p>This is the demos page!</p>
             </>
         );
     }
 }
 
-export default AboutPage; 
+export default DemosPage; 

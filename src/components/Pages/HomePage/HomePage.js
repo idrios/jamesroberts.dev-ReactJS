@@ -11,8 +11,11 @@ class HomePage extends Page {
         this.pageName = PAGE_NAMES.HOME;
     }
     renderContentBody(){
-        return (            
-            <h1>Home page!</h1>
+        return (      
+            <>      
+                <h1>Home page!</h1>
+                <p>This is the home page!</p>
+            </>
         )
     }
 }
