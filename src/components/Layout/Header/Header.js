@@ -1,7 +1,8 @@
 import React, { Component } from 'react'; 
 import { Link } from 'react-router-dom'; 
-import { Button, TextField } from '@material-ui/core'; 
+import { Button } from '@material-ui/core'; 
 import { PAGE_NAMES } from '../../../res/constants/constants'; 
+import SiteTitleSVG from '../../../res/images/site-title.svg'; 
 
 import './Header.css'; 
 
@@ -22,7 +23,7 @@ class Header extends Component {
             : (
             <div className="header">
                 <div className="header-content-top large-screen-hidden">
-                    <h1>JamesRoberts.dev</h1>
+                    <img src={SiteTitleSVG}/>
                 </div>
                 <div className="header-content-bottom">
                     <div className="header-content-left">
@@ -63,7 +64,7 @@ class Header extends Component {
                             >About</Button>
                     </div>
                     <div className="header-content-center small-screen-hidden">
-                        <h1>JamesRoberts.dev</h1>
+                        <img src={SiteTitleSVG}/>
                     </div>
                     <div className="header-content-right">
                         <Button
