@@ -27,7 +27,7 @@ class Header extends Component {
                 </div>
                 <div className="header-content-bottom">
                     <div className="header-content-left">
-                        <Button component={ Link } to="/home" 
+                        <Button component={ Link } to="/" 
                             id={PAGE_NAMES.HOME}
                             color={this.pageSrc===PAGE_NAMES.HOME ? "primary" : "default"}
                             variant={this.pageSrc===PAGE_NAMES.HOME ? "contained" : "text"}
