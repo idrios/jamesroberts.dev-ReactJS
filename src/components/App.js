@@ -7,7 +7,13 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path='/' component={Home}/>
+                    <Route exact path='/' 
+                        render={() => {
+                            return window.location.search 
+                                ? <Redirect to={window.location.search.split("?")[1]}/>
+                                : <Home/>
+                        }}
+                    />
                     <Route exact path='/home' render={() => <Redirect to="/"/>}/>
                     <Route exact path='/posts' component={Posts}/>
                     <Route exact path='/demos' component={Demos}/>
