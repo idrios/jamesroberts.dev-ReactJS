@@ -1,0 +1,13 @@
+.post-container{
+    padding: 0rem 1rem 1rem 1rem ;
+    background-color: #adadad;
+}
+
+.post-content {
+    width: 100%;
+}
+
+.post-content-body {
+    max-width: 800px;
+    margin: auto;
+}
