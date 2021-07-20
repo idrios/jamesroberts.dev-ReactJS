@@ -1,3 +1,14 @@
 ul.no-bullets{
     list-style-type: none;
 }
+
+.graph-with-math{
+    display: flex;
+    justify-content: space-between;
+}
+
+.math-input-fields{
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+}
