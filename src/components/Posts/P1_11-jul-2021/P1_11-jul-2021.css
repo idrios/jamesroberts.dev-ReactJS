@@ -1,5 +1,5 @@
 .p1_11-jul-2021-container{
-    
+
 }
 
 ul.no-bullets{
@@ -11,8 +11,16 @@ ul.no-bullets{
     justify-content: space-between;
 }
 
+.graph-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .math-input-fields{
     display: flex;
+    padding: 0 20%;
     flex-direction: column;
     background-color: #ccc;
 }

@@ -29,7 +29,6 @@ export default class Circle extends React.Component {
 
   componentDidUpdate(prevProps, prevState) { 
     if (prevProps.w_px != this.props.w_px || prevProps.h_px != this.props.h_px){
-      console.log("updating w_px to " + this.props.w_px); 
       this.updateSvg(); 
       this.updateAxes(); 
       this.updateCircle(); 

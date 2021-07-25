@@ -35,17 +35,7 @@ export default class P1_11Jul2021 extends Post{
         window.removeEventListener('resize', this.windowResizeListener); 
     }
 
-    textFieldUpdateCircleR = (event) => {
-        this.setState({
-            circle: {
-                ...this.state.circle,
-                r: event.target.value
-            }
-        });
-    }
-
     windowResizeListener = (event) => {
-        console.log(this.container.offsetWidth); 
         this.setState({
             dimens: {
                 width: this.container.offsetWidth
@@ -63,15 +53,21 @@ export default class P1_11Jul2021 extends Post{
     }
 
     renderContent(){
-        console.log(this.state.dimens.width)
         return <div className="p1_11-jul-2021-container" ref={el => (this.container=el)}>
-            <h1>Computing Pi</h1>
+            <h1>Calculating the Value of Pi</h1>
             <p>
-            If you're like me, you learned about pi at some point in grade school as being a number
-            that has to do with circles. Maybe you learned or memorized some common equations. 
+            If you <a href="https://en.wikipedia.org/wiki/Pi">look up Pi on Wikipedia</a> you'll find
+            more information about Pi than you could ever know what to do with, including a number of 
+            infinite-series algorithms derived by actual mathematicians that work better than the algorithm 
+            I'm going to show you. However, I think the algorithm in this post is easier to understand
+            than most. 
+            </p>
+            <p>
+            Pi is defined as the ratio of the circumference of a circle to it's diameter, <MathComponent tex={String.raw`\pi=\frac CD`} display={false}/>.
+            In terms of its radius, it's <MathComponent tex={String.raw`\pi=\frac C{2r}`} display={false}/>. 
+            This constant ends up finding itself in a number of other useful equations as well. 
             </p>
             <ul className="no-bullets">
-                <li>Diameter of a circle: <MathComponent tex={String.raw`C=2\pi r`} display={false}/></li>
                 <li>Area of circle: <MathComponent tex={String.raw`A=\pi r^2`} display={false}/></li>
                 <li>Surface area of a sphere: <MathComponent tex={String.raw`A=4 \pi r^2`} display={false}/></li>
                 <li>Volume of a sphere: <MathComponent tex={String.raw`V=\frac{4}{3}\pi r^3`} display={false}/></li>
@@ -80,26 +76,23 @@ export default class P1_11Jul2021 extends Post{
             Before getting into the actual computation of pi, let's explore those equations first. 
             
             </p>
-            <div className="graph-with-math">
-                <div className="math-input-fields">
-                    <TextField id="p1_11-jul-2021 r" label="r" onChange={this.textFieldUpdateCircleR}/>
-                    <Slider 
-                        defaultValue={1.0}
-                        min={0.0}
-                        step={0.1}
-                        max={10.0}
-                        valueLabelDisplay="auto" 
-                        onChange={this.sliderUpdateCircleR}
-                        />
-                </div>
-                <div className="graph-display">
-                    <MathComponent tex={String.raw`x^2 + y^2 = r^2`} />
-                    <Circle 
-                        r={this.state.circle.r} 
-                        w_px={Math.min(this.state.dimens.width, 400)} 
-                        h_px={Math.min(this.state.dimens.width, 400)}
-                        />
-                </div>
+            <div className="graph-display">
+                <MathComponent tex={String.raw`x^2 + y^2 = r^2`} />
+                <Circle 
+                    r={this.state.circle.r} 
+                    w_px={Math.min(this.state.dimens.width, 400)} 
+                    h_px={Math.min(this.state.dimens.width, 400)}
+                    />
+            </div>
+            <div className="math-input-fields">
+                <Slider 
+                    defaultValue={1.0}
+                    min={0.0}
+                    step={0.1}
+                    max={10.0}
+                    valueLabelDisplay="auto" 
+                    onChange={this.sliderUpdateCircleR}
+                    />
             </div>
             <MathComponent tex={String.raw`C = 2\pi r`} />
             <p>
