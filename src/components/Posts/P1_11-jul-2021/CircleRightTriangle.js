@@ -1,7 +1,7 @@
 import React from 'react';
 import * as d3 from 'd3'; 
 
-export default class Circle extends React.Component {
+export default class CircleRightTriangle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,9 @@ export default class Circle extends React.Component {
         x_axis_label: '',
         y_axis: '',
         circle: '',
-        radius: ''
+        r_x: '',
+        r_y: '',
+        r_vec: ''
       }
     }
   }
@@ -64,7 +66,7 @@ export default class Circle extends React.Component {
     const y_axis_component = d3.axisLeft()
       .scale(y_scale) 
 
-    const svg = d3.select(".d3-circle").append("svg")
+    const svg = d3.select(this.svg).append("svg")
       .attr("width", w_px)
       .attr("height", h_px);
     const x_axis = svg.append("g")
@@ -97,7 +99,19 @@ export default class Circle extends React.Component {
       .attr("r", r_px)
       .attr("fill-opacity", "0.0")
       .attr("stroke", "red");
-    const radius = svg.append("line")
+    const r_x = svg.append("line")
+        .style("stroke", "blue")
+        .attr("x1", w_px/2)
+        .attr("y1", h_px/2)
+        .attr("x2", (w_px/2)+(r_px/Math.sqrt(2.0)))
+        .attr("y2", h_px/2);
+    const r_y = svg.append("line")
+        .style("stroke", "blue")
+        .attr("x1", (w_px/2)+(r_px/Math.sqrt(2.0)))
+        .attr("y1", h_px/2)
+        .attr("x2", (w_px/2)+(r_px/Math.sqrt(2.0)))
+        .attr("y2", (h_px/2)-(r_px/Math.sqrt(2.0)));
+    const r_vec = svg.append("line")
       .style("stroke", "blue")
       .attr("x1", w_px/2)
       .attr("y1", h_px/2)
@@ -123,7 +137,9 @@ export default class Circle extends React.Component {
         y_axis,
         y_axis_label,
         circle,
-        radius
+        r_x,
+        r_y,
+        r_vec
       }
     });
   }
@@ -200,7 +216,18 @@ export default class Circle extends React.Component {
       .attr("r", r_px)
       .attr("fill-opacity", "0.0")
       .attr("stroke", "red");
-    this.state.d3.radius
+
+    this.state.d3.r_x
+        .attr("x1", w_px/2)
+        .attr("y1", h_px/2)
+        .attr("x2", (w_px/2)+(r_px/Math.sqrt(2.0)))
+        .attr("y2", h_px/2);
+    this.state.d3.r_y
+        .attr("x1", (w_px/2)+(r_px/Math.sqrt(2.0)))
+        .attr("y1", h_px/2)
+        .attr("x2", (w_px/2)+(r_px/Math.sqrt(2.0)))
+        .attr("y2", (h_px/2)-(r_px/Math.sqrt(2.0)));
+    this.state.d3.r_vec
       .attr("x1", w_px/2)
       .attr("y1", h_px/2)
       .attr("x2", (w_px/2)+(r_px/Math.sqrt(2.0)))
@@ -209,7 +236,7 @@ export default class Circle extends React.Component {
 
   render() {
     return (
-      <div className="d3-circle">
+      <div ref={(node)=>{this.svg = node;}} className="d3-circle-right-triangle">
       </div>
     )
   }
