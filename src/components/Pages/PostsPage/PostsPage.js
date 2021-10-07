@@ -3,7 +3,7 @@ import React from 'react';
 import Page from '../Page/Page';
 
 import { PAGE_NAMES } from '../../../res/constants/constants';
-import { P1_11Jul2021 } from '../../Posts/Posts';
+import { _7Oct2021 } from '../../Posts/Posts';
 
 
 class PostsPage extends Page {
@@ -16,7 +16,7 @@ class PostsPage extends Page {
     renderContentBody(){
         return (
             <div>
-                <P1_11Jul2021/>
+                <_7Oct2021/>
             </div>
         );
     }
