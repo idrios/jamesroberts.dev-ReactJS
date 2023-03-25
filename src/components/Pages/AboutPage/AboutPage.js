@@ -6,8 +6,6 @@ import { PAGE_NAMES } from '../../../res/constants/constants';
 class AboutPage extends Page {
     constructor(props){
         super(props)
-        this.showHeader = true; 
-        this.showFooter = true; 
         this.pageName = PAGE_NAMES.ABOUT;
     }
     renderContentBody(){

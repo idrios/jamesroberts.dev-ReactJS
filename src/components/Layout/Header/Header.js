@@ -41,24 +41,24 @@ class Header extends Component {
                             variant={this.pageSrc===PAGE_NAMES.POSTS ? "contained" : "text"}
                             onKeyDown={ev => {
                                 if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.HOME).focus(); 
-                                else if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.DEMOS).focus()}
+                                else if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.PROJECTS).focus()}
                             }
                             >Posts</Button>
-                        <Button component={ Link } to="/demos"
-                            id={PAGE_NAMES.DEMOS}
-                            color={this.pageSrc==="demos" ? "primary" : "default"}
-                            variant={this.pageSrc==="demos" ? "contained" : "text"}
+                        <Button component={ Link } to="/projects"
+                            id={PAGE_NAMES.PROJECTS}
+                            color={this.pageSrc==="projects" ? "primary" : "default"}
+                            variant={this.pageSrc==="projects" ? "contained" : "text"}
                             onKeyDown={ev => {
                                 if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.POSTS).focus(); 
                                 else if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.ABOUT).focus()}
                             }
-                            >Demos</Button>
+                            >Projects</Button>
                         <Button component={ Link } to="/about"
                             id={PAGE_NAMES.ABOUT}
                             color={this.pageSrc==="about" ? "primary" : "default"}
                             variant={this.pageSrc==="about" ? "contained" : "text"}
                             onKeyDown={ev => {
-                                if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.DEMOS).focus(); 
+                                if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.PROJECTS).focus(); 
                                 else if(ev.key === 'ArrowRight') document.getElementById("themes").focus()}
                             }
                             >About</Button>

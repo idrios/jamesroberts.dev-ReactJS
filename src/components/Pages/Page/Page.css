@@ -14,3 +14,67 @@
     max-width: 800px;
     margin: auto;
 }
+
+.background-about{
+  background-size: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(230, 230, 255, 0.5)
+    ),
+    url('../../../res/images/background-about.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+}
+
+.background-default{
+  background-size: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(230, 230, 255, 0.5)
+    ),
+    url('../../../res/images/background-404.svg');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+.background-home{
+  background-size: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(230, 230, 255, 0.5)
+    ),
+    url('../../../res/images/background-home.svg');
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
+.background-posts{
+  background-size: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(230, 230, 255, 0.5)
+    ),
+    url('../../../res/images/background-posts.svg');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;  
+}
+
+.background-projects{
+  background-size: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(230, 230, 255, 0.5)
+    ),
+    url('../../../res/images/background-projects.svg');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}

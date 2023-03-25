@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'; 
-import { Home, About, Posts, Demos, FourZeroFour } from './Pages/Pages'; 
+import { Home, About, Posts, Projects, FourZeroFour } from './Pages/Pages'; 
 
 class App extends Component {
     render() {
@@ -16,7 +16,7 @@ class App extends Component {
                     />
                     <Route exact path='/home' render={() => <Redirect to="/"/>}/>
                     <Route exact path='/posts' component={Posts}/>
-                    <Route exact path='/demos' component={Demos}/>
+                    <Route exact path='/projects' component={Projects}/>
                     <Route exact path='/about' component={About}/>
                     <Route component={FourZeroFour}/>
                 </Switch>
