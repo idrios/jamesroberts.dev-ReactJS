@@ -15,13 +15,13 @@ class Page extends Component {
     constructor(props){
         super(props); 
         this.showHeader = true; 
-        this.showFooter = true; 
+        this.showFooter = false; 
         this.pageName = PAGE_NAMES.DEFAULT;
     }
 
     render(){
         return (            
-            <div className="page-container">
+            <div className={"page-container background-"+this.pageName.toLowerCase()}>
                 <div>
                     <Header pageSrc={this.pageName} visible={this.showHeader}/>
                     <div className="page-content">

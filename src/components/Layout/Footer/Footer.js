@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 
-export default class Header extends Component {
+export default class Footer extends Component {
     constructor(props) {
         super(props);
         this.visible = this.props.visible; 

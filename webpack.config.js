@@ -24,7 +24,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"]
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/, 
+                test: /\.(jpe?g|png|gif|svg|ico)$/, 
                 exclude: /node_modules/,
                 loader: 'file-loader'
             }
@@ -35,7 +35,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            favicon: './src/favicon.ico'
         })
     ],
     performance: {
