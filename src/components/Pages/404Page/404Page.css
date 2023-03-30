@@ -2,3 +2,10 @@
     max-width: 800px;
     margin: auto;
 }
+
+.four-oh-four {
+    width: 80%;
+    max-width: 640px;
+    padding-left: 10%;
+    padding-right: 10%;
+}

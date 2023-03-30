@@ -11,8 +11,30 @@ class AboutPage extends Page {
     renderContentBody(){
         return (
             <>
-                <h1>About Page!</h1>
-                <p>This is the about page!</p>
+                <h1>About Me</h1>
+                <p>
+                  I'm a full stack software developer, originally from upstate New York but currently living
+                  in Ohio. I enjoy building sustainable software, following design principles that make 
+                  software easy to maintain. I studied biomedical imaging at Case Western and still have a soft 
+                  spot for building software in the biomedical space, but I enjoy working on any problems
+                  that make me a better software developer. 
+                </p>
+                <h1>Contact</h1>
+                <p>
+                  I am currently looking for new projects to work on! Please reach out to me for inquiries. 
+                </p>
+                <p><b>email</b>: jimroberts10@gmail.com</p>
+                <p>
+                  Alternatively, if you're someone I've known before from my travels and have since lost contact 
+                  with -- if you're a former coworker, one of my English students, airbnb roommate, WoW 
+                  guildmate -- please reach out!
+                </p>
+                <h1>Skills</h1>
+                <p>
+                  C#, Python, Kotlin, Java, Javascript, Typescript, Matlab, Simulink, Labview, SQL, HTML, CSS, Git, React, Webpack, Antd,
+                  Material UI, NodeJS, d3js, ASP.NET, SignalR, Selenium, ffmpeg, Unity, OpenGL, WebGL, Shadertoy, Jest, Junit, Xunit,
+                  Android SDK, REST, DDD, MVC, Statistics, Biomedical Imaging, Physics, Electrical Engineering 
+                </p>
             </>
         );
     }

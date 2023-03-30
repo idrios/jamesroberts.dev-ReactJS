@@ -10,7 +10,7 @@ class FourZeroFourPage extends Page {
             <>
                 <h1>404</h1>
                 <p>You are lost.</p>
-                <img src={DogJPG}></img>
+                <img className="four-oh-four" src={DogJPG}></img>
             </>
         )
     }

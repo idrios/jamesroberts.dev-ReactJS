@@ -1,6 +1,8 @@
 .post-container{
-    padding: 0rem 1rem 1rem 1rem ;
-    background-color: #adadad;
+  padding: 1rem ;
+  margin: 1rem; 
+  border-radius: 1rem;
+  background-color: #bdbddddd;
 }
 
 .post-content {
@@ -9,5 +11,4 @@
 
 .post-content-body {
     max-width: 800px;
-    margin: auto;
 }
