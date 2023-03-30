@@ -1,22 +1,21 @@
 import React from 'react';
-import './Post.css';
+import DefaultThumbnailJpg from '../../../res/images/no-script-dog.jpg'
+import './Project.css';
 
-/**
- * A post has a required prop called "config" with all optional parameters "title", "date", and "content" 
- */
-class Post extends React.Component {
+class Project extends React.Component {
     constructor(props){
         super(props); 
         if(!this.props.content){
             return; 
         }
-        console.log(this.props.content); 
+        this.thumbnail = this.props.thumbnail || DefaultThumbnailJpg;
+        this.content = this.props.content;
     }
 
     render(){
         return (            
-            <div className="post-container">
-                <div className="post-content">
+            <div className="project-container">
+                <div className="project-content">
                     {this.renderContent()}
                 </div>
             </div>
@@ -25,9 +24,12 @@ class Post extends React.Component {
 
     renderContent(){
         return (
-            <div className="post-content-body">
+          <>
+            <img className="project-thumbnail" src={this.thumbnail}/>
+            <div className="project-content-body">
                 {this.renderContentBody()}
             </div>
+          </>
         )
 
     }
@@ -35,7 +37,9 @@ class Post extends React.Component {
     renderContentBody(){
         return (
             <>
-                <p>This is the default render method for a new page. Fill the contents of this page in whatever way you'd like! You can...</p>
+                <p>
+                  This is the default render method for a new project. Fill the contents of this page in whatever way you'd like! You can...
+                </p>
                 <ul>
                     <li>Override the <b>renderContentBody()</b> method to show page content with default page styling</li>
                     <li>Alternatively, override the <b>renderContent()</b> method to show page content with your own styling</li>
@@ -46,4 +50,4 @@ class Post extends React.Component {
         )
     }
 }
-export default Post; 
+export default Project; 

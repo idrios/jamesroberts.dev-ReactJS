@@ -2,6 +2,7 @@ import React from 'react';
 
 import Page from '../Page/Page';
 import { PAGE_NAMES } from '../../../res/constants/constants';  
+import { SpaceCube, WordFall } from '../../Projects/Projects'
 
 class ProjectsPage extends Page {
     constructor(props){
@@ -11,8 +12,8 @@ class ProjectsPage extends Page {
     renderContentBody(){
         return (
             <>
-                <h1>Projects Page!</h1>
-                <p>This is the Projects page!</p>
+              <WordFall/>
+              <SpaceCube/>
             </>
         );
     }

@@ -11,8 +11,12 @@ class HomePage extends Page {
     renderContentBody(){
         return (      
             <>      
-                <h1>Home page!</h1>
-                <p>This is the home page!</p>
+                <h1>Welcome!</h1>
+                <p>Thanks for visiting my website. I'm James Roberts, a full stack software developer. This is my website 
+                  for posting various musings and showing off some of my work. I'm flattered that you've found your way
+                  to my site, and I hope that you'll come back again in the future when I've updated with  some more posts
+                  or projects. 
+                </p>
             </>
         )
     }

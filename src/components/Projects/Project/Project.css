@@ -1,0 +1,25 @@
+.project-container{
+  padding: 1rem ;
+  margin: 1rem; 
+  border-radius: 1rem;
+  background-color: #bdbddddd;
+}
+
+.project-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start; 
+}
+
+.project-content-body {
+  max-width: 680px;
+  flex-direction: column;
+}
+
+.project-thumbnail {
+  max-width: 120px;
+  margin: 1rem
+  
+}
