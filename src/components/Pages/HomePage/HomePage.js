@@ -1,7 +1,8 @@
 import React from 'react'; 
-
 import Page from '../Page/Page';
-import { PAGE_NAMES } from '../../../res/constants/constants';  
+import { PAGE_NAMES } from '../../../res/constants/constants'; 
+
+import './HomePage.css'; 
 
 class HomePage extends Page {
     constructor(props){
@@ -10,14 +11,13 @@ class HomePage extends Page {
     }
     renderContentBody(){
         return (      
-            <>      
+            <div className='home'>      
                 <h1>Welcome!</h1>
-                <p>Thanks for visiting my website. I'm James Roberts, a full stack software developer. This is my website 
-                  for posting various musings and showing off some of my work. I'm flattered that you've found your way
-                  to my site, and I hope that you'll come back again in the future when I've updated with  some more posts
-                  or projects. 
+                <p>
+                  Welcome to my personal website. It's still a relatively young site but 
+                  stick around as I continue updating it with posts and features.
                 </p>
-            </>
+            </div>
         )
     }
 }

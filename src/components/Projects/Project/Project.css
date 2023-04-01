@@ -8,9 +8,22 @@
 .project-content {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
+}
+
+
+@media (min-width: 701px) {
+    .large-screen-hidden{
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .small-screen-hidden{
+        display: none;
+    }
 }
 
 .project-content-body {
@@ -18,8 +31,21 @@
   flex-direction: column;
 }
 
-.project-thumbnail {
+.project-content-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project-thumbnail-large {
   max-width: 120px;
+  max-height: 120px;
   margin: 1rem
-  
+}
+
+.project-thumbnail-small{
+  max-width: 80px;
+  max-height: 80px;
+  margin: 0.5rem
 }
