@@ -11,6 +11,7 @@ class Header extends Component {
         super(props);
         this.visible = this.props.visible; 
         this.pageSrc = this.props.pageSrc;
+        this.showThemes = this.props.showThemes; 
     }
 
     componentDidMount(){
@@ -59,7 +60,7 @@ class Header extends Component {
                             variant={this.pageSrc==="about" ? "contained" : "text"}
                             onKeyDown={ev => {
                                 if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.PROJECTS).focus(); 
-                                else if(ev.key === 'ArrowRight') document.getElementById("themes").focus()}
+                                else if(ev.key === 'ArrowRight' && this.showThemes) document.getElementById("themes").focus()}
                             }
                             >About</Button>
                     </div>
@@ -67,13 +68,17 @@ class Header extends Component {
                         <img src={SiteTitleSVG}/>
                     </div>
                     <div className="header-content-right">
-                        <Button
-                            id={"themes"}
-                            onKeyDown={ev => {
-                                if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.ABOUT).focus()}
-                            }
-                        >Themes</Button>
-                    </div>        
+                      {
+                      this.showThemes
+                        ? <Button
+                              id={"themes"}
+                              onKeyDown={ev => {
+                                  if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.ABOUT).focus()}
+                              }
+                          >Themes</Button>
+                          : <></>        
+                      }
+                    </div>
                 </div>                    
             </div>
         )

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Page from '../Page/Page';
 import { PAGE_NAMES } from '../../../res/constants/constants';  
-import { SpaceCube, WordFall } from '../../Projects/Projects'
+import { NeuroSegmentor, SpaceCube, WordFall } from '../../Projects/Projects'
 
 class ProjectsPage extends Page {
     constructor(props){
@@ -14,6 +14,7 @@ class ProjectsPage extends Page {
             <>
               <WordFall/>
               <SpaceCube/>
+              <NeuroSegmentor/>
             </>
         );
     }

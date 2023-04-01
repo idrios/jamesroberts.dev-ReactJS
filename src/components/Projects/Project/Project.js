@@ -5,11 +5,10 @@ import './Project.css';
 class Project extends React.Component {
     constructor(props){
         super(props); 
-        if(!this.props.content){
-            return; 
-        }
         this.thumbnail = this.props.thumbnail || DefaultThumbnailJpg;
-        this.content = this.props.content;
+        this.title=this.props.title || "New Project"
+        this.date=this.props.date || undefined
+        this.secondaryTitle=this.props.secondaryTitle || undefined
     }
 
     render(){
@@ -24,14 +23,31 @@ class Project extends React.Component {
 
     renderContent(){
         return (
-          <>
-            <img className="project-thumbnail" src={this.thumbnail}/>
-            <div className="project-content-body">
-                {this.renderContentBody()}
+          <div className="flex-row">
+            <img className="project-thumbnail-large small-screen-hidden" src={this.thumbnail}/>
+            <div className="flex-col">
+              <div className="project-content-header">
+                <img className="project-thumbnail-small large-screen-hidden" src={this.thumbnail}/>
+                {this.renderContentHeader()}
+              </div>
+              <div className="project-content-body">
+                  {this.renderContentBody()}
+              </div>
             </div>
-          </>
+          </div>
         )
+    }
 
+    renderContentHeader(){
+        return (
+            <div className="flex-col">
+              <h1>{this.title}   <span className='project-date'>({this.date})</span></h1>
+              <h4 className='secondary-title'> 
+                {this.secondaryTitle}
+              </h4>
+              <br/>
+            </div>
+        )
     }
 
     renderContentBody(){

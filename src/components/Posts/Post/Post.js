@@ -10,7 +10,6 @@ class Post extends React.Component {
         if(!this.props.content){
             return; 
         }
-        console.log(this.props.content); 
     }
 
     render(){
