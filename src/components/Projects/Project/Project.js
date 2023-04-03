@@ -5,18 +5,29 @@ import './Project.css';
 class Project extends React.Component {
     constructor(props){
         super(props); 
-        this.thumbnail = this.props.thumbnail || DefaultThumbnailJpg;
+        this.thumbnail = this.props.thumbnail || DefaultThumbnailJpg
         this.title=this.props.title || "New Project"
         this.date=this.props.date || undefined
         this.secondaryTitle=this.props.secondaryTitle || undefined
+        this.state = {
+          collapsed: this.props.collapsed || false
+        }
     }
 
     render(){
         return (            
             <div className="project-container">
-                <div className="project-content">
+                <div className={`project-content${this.state.collapsed ? ' collapsed' : ''}`}>
                     {this.renderContent()}
                 </div>
+                { 
+                  this.state.collapsed
+                    ? <label 
+                        onClick={() => this.expandContent()}
+                        className="hover-pointer"
+                        >show more...</label>
+                    : <></>
+                }
             </div>
         )
     }
@@ -64,6 +75,12 @@ class Project extends React.Component {
                 <p>Good luck with whatever you choose!</p>
             </>
         )
+    }
+
+    expandContent(){
+      this.setState({
+        collapsed: false
+      })
     }
 }
 export default Project; 

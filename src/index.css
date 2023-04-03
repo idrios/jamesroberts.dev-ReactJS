@@ -61,6 +61,14 @@ a{
   flex-direction: row;
 }
 
+.autoscale{
+  width: 100%;
+}
+
+.hover-pointer{
+  cursor: pointer;
+}
+
 .post-date{
   font-size: 16px; 
   color: #444;

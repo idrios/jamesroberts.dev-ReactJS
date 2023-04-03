@@ -5,6 +5,16 @@
   background-color: #bdbddddd;
 }
 
+.collapsed{
+  height: 300px;
+  overflow: hidden;
+}
+
+.expanded{
+  height: auto;
+  overflow: auto;
+}
+
 .project-content {
   width: 100%;
   display: flex;
