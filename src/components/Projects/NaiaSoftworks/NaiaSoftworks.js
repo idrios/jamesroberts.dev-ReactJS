@@ -14,7 +14,7 @@ export default class NaiaSoftworks extends Project{
         super(props)
         this.thumbnail=ThumbnailPng
         this.title="Naia Softworks"
-        this.date="2014-present"
+        this.date="2013-present"
         this.secondaryTitle=""
     }
 
@@ -22,14 +22,14 @@ export default class NaiaSoftworks extends Project{
         return (
         <>
           <p>
-            Starting as your average videogame concept in 2014 about a war between men and gods, the world of Naia has 
-            evolved over the years to have a rich lore with layers of conflict between nations, individuals, 
+            Starting as your typical videogame concept in 2013 about a war between men and gods, the world of Naia has 
+            evolved over the years to have a rich lore with layers of conflict between peoples, individuals, 
             and nature. 
           </p>
           <br/>
           <p>
             I've had a lot of fun describing biological phenomena in Naia that doesn't exist on Earth, 
-            but credit for the boundless volumes of lore, including a completed (though yet unpublished) 300-page 
+            but credit for the boundless volumes of lore, including a completed (though yet unpublished) 130,000 word
             novel, goes to my friend Tim Filla. Credit for the map in the thumbnail also goes to Tim. 
           </p>
           <br/>

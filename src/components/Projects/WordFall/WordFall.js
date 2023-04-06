@@ -1,6 +1,9 @@
 import React from 'react'
-import Project from '../Project/Project';
-import ThumbnailPng from '../../../res/images/wordfall.png';
+import Project from '../Project/Project'
+import ThumbnailPng from '../../../res/images/wordfall.png'
+import DemoGif from '../../../res/images/wordfall-demo.gif'
+
+import './WordFall.css'
 
 
 
@@ -27,6 +30,8 @@ export default class SpaceCube extends Project{
               combination, spell an English 6-letter word. If you can find all valid 3-, 4-, 5-, and 6-letter words that
               can be spelled with your six letters, you win! There is no timer. 
             </p>
+            <br/>
+            <img src={DemoGif} className='wordfall-android'/>
             <br/>
             <p>
               The entire project is <a href='https://github.com/idrios/WordMash'>uploaded to my github</a>. The game was 

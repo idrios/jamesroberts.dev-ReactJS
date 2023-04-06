@@ -1,7 +1,10 @@
 import React from 'react'
-import Project from '../Project/Project';
-import ThumbnailPng from '../../../res/images/spacecube.png';
+import Project from '../Project/Project'
+import ThumbnailPng from '../../../res/images/spacecube.png'
+import DemoGif from '../../../res/images/spacecube-demo.gif'
+import InfiniteGif from '../../../res/images/spacecube-infinite.gif'
 
+import './SpaceCube.css'
 
 
 export default class SpaceCube extends Project{
@@ -26,6 +29,10 @@ export default class SpaceCube extends Project{
             I have no intentions of ever changing it. 
           </p>
           <br/>
+          <div className='flex-row'>
+            <img src={DemoGif} className='spacecube-android'/>
+            <img src={InfiniteGif} className='spacecube-android'/>
+          </div>
           <p>
             Please rate it 5 stars.  
           </p>

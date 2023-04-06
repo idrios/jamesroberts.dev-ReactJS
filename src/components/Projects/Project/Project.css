@@ -37,6 +37,7 @@
 }
 
 .project-content-body {
+  display: flex;
   max-width: 680px;
   flex-direction: column;
 }
@@ -49,13 +50,18 @@
 }
 
 .project-thumbnail-large {
+  align-self: flex-start;
   max-width: 120px;
   max-height: 120px;
+  width: 100%;
+  height: auto;
   margin: 1rem
 }
 
 .project-thumbnail-small{
   max-width: 80px;
   max-height: 80px;
+  width: 100%;
+  height: auto;
   margin: 0.5rem
 }
