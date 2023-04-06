@@ -1,6 +1,7 @@
 import React from 'react'; 
 import Page from '../Page/Page';
 import { PAGE_NAMES } from '../../../res/constants/constants';  
+import ResumePDF from '../../../res/files/james-roberts-resume-APR2023.pdf'
 
 import './AboutPage.css'
 
@@ -34,6 +35,10 @@ class AboutPage extends Page {
                   C#, Python, Kotlin, Java, Javascript, Typescript, Matlab, Simulink, Labview, SQL, HTML, CSS, Git, React, Webpack, Antd,
                   Material UI, NodeJS, d3js, ASP.NET, SignalR, Selenium, ffmpeg, Unity, OpenGL, WebGL, Shadertoy, Jest, Junit, Xunit,
                   Android SDK, REST, DDD, MVC, CI/CD, Statistics, Biomedical Imaging, Physics, Electrical Engineering 
+                </p>
+                <h1>Resume</h1>
+                <p>
+                  <a href={ResumePDF}>download resume</a>
                 </p>
             </div>
         );
