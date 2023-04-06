@@ -14,15 +14,13 @@ class HomePage extends Page {
             <div className='home'>      
                 <h1>Welcome!</h1>
                 <p>
-                  I'm a full stack software developer. I focus on developing software that is 
-                  easily maintainable through use of good design patterns and principles. I'm
-                  interested in designing software in the medical space, though I also enjoy 
-                  game development and am very happy to work on any project that gives me a 
-                  chance to expand my skills.  
+                  I made this website to show off some of the stuff I'm working on and post various
+                  musings. The site is still young, but do come back as I hope to start writing 
+                  blog posts a bit more often. 
                 </p>
                 <br/>
                 <p>
-                  Thanks for visiting my site and feel free to reach out to me. 
+                  Thanks for visiting and feel free to reach out to me. 
                 </p>
             </div>
         )

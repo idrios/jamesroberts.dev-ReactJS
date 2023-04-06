@@ -42,7 +42,7 @@ export default class NeuroSegmenter extends Project{
             <p>
               At its core, all that a machine learning algorithm does is solve the problem of: "given some
               massive collection of X inputs, what's the probability of Y output". I had tried to reuse the
-              code from my intro ML course that learns numbers from a training set of hand drawn images. that
+              code from my intro ML course that recognizes numbers from a training set of hand drawn images. That
               code was not really reusable in this context because it was designed for recognizing shapes,
               and the neurons are amorphous. Still, I was hoping that by just throwing ideas at the wall, 
               I would start to develop an intuition on how to use ML to segment these 3D images. I felt 
@@ -54,20 +54,20 @@ export default class NeuroSegmenter extends Project{
               There were 3 volumes of training data. While I'm quite certain my algorithm was never going 
               to be successful at segmenting the rest of the volume set, I believe there must have been a 
               significant number of situations not reflected by the training set. Mitochondria seemed to often
-              have features that would make it easily mistakeable for a small neuron, or vice versa. Far worse, 
-              one of the other criterias -- "synaptic cleft detection" -- was impossible for <i>me</i> to 
+              have features that would make it easily mistakeable for a small neuron by an algorithm, or vice versa. Far worse, 
+              one of the other criteria -- "synaptic cleft detection" -- was impossible for <i>me</i> to 
               distinguish from the training data. I tried searching scientific literature for how to read 3D 
-              volumes of neurosystems, and I couldn't find anything useful. This seemed like an area that you needed
-              first-hand experience with, where it's merely second nature to any labs doing this research and 
-              completely foreign to outsiders. 
+              volumes of neurosystems, but I failed to find anything useful. This seemed like an area that you needed
+              first-hand experience with, where it's second nature to the labs doing this research and 
+              foreign to outsiders. 
             </p>
             <ul><li><i>Machine Learning isn't guaranteed to work and I should abandon this project until I have 
               better financial stability</i></li></ul>
-            <p>Unlike other aspects of software or engineering, it's incredibly hard to know if your approach to 
+            <p>Unlike other aspects of software or engineering, it's hard to know if your approach to 
               an ML problem will work until you've tried it. I've read someone liken ML to engineering bridges. 
               In civil engineering, there are various known approaches like using arches of various radii, 
               using suspension bridges, pillars, etc. But it wasn't until calculus was invented that we could 
-              actually use math to figure out the optimal dimensions of a bridge. Likewise, we don't have any
+              actually use math to calculate the optimal dimensions of a bridge. Likewise, we don't have any
               algorithm yet for choosing an optimal ML approach, so it's still a bit more of an art than a 
               science. I didn't have the right eye for it yet, and in 2016 I needed a job so I didn't have 
               time to beat my head against the wall fighting failure in this area. 
