@@ -24,8 +24,8 @@ export default class SlimeControl extends Project{
             My friend <a href="https://www.youtube.com/@jackstratus1323">Mitch</a> invited me to join Metroidvania Month 19 
             with a number of other devs and artists. We had 1 month to build a metroidvania-styled game under the theme of
             "you are the monster". The premise of our game, Slime Control, is that you are a slime-creature trying to break
-            out of a lab. While your character may be weak, you can greatly bolster your capabilities by possessing a myriad 
-            of foes.
+            out of a lab. While your character may be weak, you can greatly bolster your capabilities by possessing myriad 
+            foes.
           </p>
           <table>
             <tbody>
@@ -59,7 +59,7 @@ export default class SlimeControl extends Project{
               </tr>
               <tr><th>Level Design</th></tr>
               <tr>
-                <td>idrios</td>
+                <td>idrios (myself)</td>
                 <td><a href="https://jamesroberts.dev">website</a></td>
               </tr>
               <tr><th>Programming</th></tr>
@@ -72,7 +72,7 @@ export default class SlimeControl extends Project{
                 <td><a href="https://itch.io/profile/jack-stratus">itch</a></td>
               </tr>
               <tr>
-                <td>Kieth (Beat Quest Games)</td>
+                <td>Keith (Beat Quest Games)</td>
                 <td><a href="https://beatquestgames.itch.io/">itch</a></td>
               </tr>
               <tr><th>Music</th></tr>

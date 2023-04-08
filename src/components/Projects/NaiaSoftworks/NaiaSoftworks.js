@@ -46,7 +46,7 @@ export default class NaiaSoftworks extends Project{
           <p className='remark'>Backlog item #403: make the art consistent</p>
           <br/>
           <p>
-            The lore continues to evolve and our progress towards a playable game continues to advance. The 
+            The lore is still evolving and our progress towards a playable game continues to advance. The 
             current state of this ongoing project is that we're working on a smaller game with a lighter scope,
             which takes place elsewhere in the fantasy world. We've already built a moderate amount of tooling 
             around the new game but it's still in very early stages. 

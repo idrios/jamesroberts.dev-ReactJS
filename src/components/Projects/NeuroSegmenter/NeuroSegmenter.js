@@ -25,14 +25,13 @@ export default class NeuroSegmenter extends Project{
             images into useful data. The images are electron microscopy data for a fully scanned drosophila 
             neurosystem, the goal was to map the entire connectome. I attempted to take part in this challenge; 
             I had recently completed Andrew Ng's <a href="https://www.coursera.org/learn/machine-learning">
-            coursera course on Machine Learning</a> and wanted to test if I had learned anything. 
+            coursera course on Machine Learning</a> and wanted to test what I had learned. 
           </p>
           <br/>
           <p>
-            I failed the challenge. In fact, I failed it so hard that it broke my computer. I don't know exactly
-            what went wrong, just that my ML algorithm was using 100% of my RAM for a long time, the computer 
-            froze, and after rebooting I could not escape the bios (I did manage to get my files off the hard 
-            drive though). So you won't find my name on the CREMI leaderboard.
+            I did not produce usable results. I also fried my computer while running my machine learning 
+            algorithm. You won't find my name on the CREMI leaderboard, but I did manage to recover my files
+            from my hard drive, so I still came out a winner. 
           </p>
           <br/>
           <p>
@@ -93,7 +92,7 @@ export default class NeuroSegmenter extends Project{
           <br/>
           <p>
             This project posed as the impetus for a number of other projects. The performance issues (from breaking
-            my computer) motivated me to get deeper into graphics programming, which did inadvertently lead to 
+            my computer) motivated me to get deeper into how to use a GPU for programming, which did inadvertently lead to 
             SpaceCube. The limited size of training data motivated me to seek ways to speed up manual 3D volume segmentation, 
             which has inspired some of my other projects. But I still haven't touched this project at all since 2016. 
           </p>

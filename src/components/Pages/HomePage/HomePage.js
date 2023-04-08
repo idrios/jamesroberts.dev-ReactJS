@@ -14,7 +14,7 @@ class HomePage extends Page {
             <div className='home'>      
                 <h1>Welcome!</h1>
                 <p>
-                  I made this website to show off some of the stuff I'm working on and post various
+                  I made this website to show off some of the projects I'm working on and post various
                   musings. The site is still young, but do come back as I hope to start writing 
                   blog posts a bit more often. 
                 </p>

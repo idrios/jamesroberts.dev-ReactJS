@@ -12,13 +12,13 @@ class ProjectsPage extends Page {
     renderContentBody(){
         return (
             <>
-              <PhoneToDesktopSync collapsed={false}/>
-              <JamesRobertsDotDev collapsed={false}/>
-              <NaiaSoftworks collapsed={true}/>
-              <SlimeControl collapsed={true}/>
-              <WordFall collapsed={true}/>
-              <SpaceCube collapsed={true}/>
-              <NeuroSegmenter collapsed={true}/>
+              <PhoneToDesktopSync/>
+              <JamesRobertsDotDev/>
+              <NaiaSoftworks collapsible={true}/>
+              <SlimeControl collapsible={true}/>
+              <WordFall collapsible={true}/>
+              <SpaceCube collapsible={true}/>
+              <NeuroSegmenter collapsible={true}/>
             </>
         );
     }

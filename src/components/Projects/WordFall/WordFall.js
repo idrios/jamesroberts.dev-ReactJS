@@ -21,8 +21,7 @@ export default class SpaceCube extends Project{
         <>
             <p>
               From 2017-2018 I was an English teacher in China. I wanted to make word games for my students, so I made 
-              my own a version of a familiar capcop game that I had immensely enjoyed as a kid. After finishing and 
-              releasing this for Android, my students unanimously hated it. I still enjoy the game myself, however. 
+              my own version of a familiar PopCap game that I had immensely enjoyed as a kid.
             </p>
             <br/>
             <p>
@@ -38,9 +37,9 @@ export default class SpaceCube extends Project{
               written from scratch in Android Studio. It implements its own custom event messaging system. My algorithm for 
               finding all combinations of words is O(N), so restarts load very quickly. All assets were hand drawn by me
               and all sound effects were recorded by me, except for the music which is by Erik Satie and is public domain. 
-              The list of words in the pool is the full Scrabble dictionary (~30,000 words total), which are in plaintext 
-              files saved directly into the app. It does include curse words, American & UK variants of the same word, 
-              and some acronyms. This does make the game incredibly hard.
+              The list of words in the pool is the full Scrabble dictionary for 3 to 6-letter words (~30,000 words total), 
+              which are in plaintext files saved directly into the app. It does include curse words, American & UK 
+              variants of the same word, and some acronyms. This does make the game incredibly hard.
             </p>
             <br/>
         </>

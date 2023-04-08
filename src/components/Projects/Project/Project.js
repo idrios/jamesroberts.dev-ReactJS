@@ -1,32 +1,38 @@
 import React from 'react';
-import DefaultThumbnailJpg from '../../../res/images/no-script-dog.jpg'
+import DefaultThumbnailPng from '../../../res/images/thumbnail-default.png'
 import './Project.css';
 
 class Project extends React.Component {
     constructor(props){
         super(props); 
-        this.thumbnail = this.props.thumbnail || DefaultThumbnailJpg
+        this.thumbnail = this.props.thumbnail || DefaultThumbnailPng
         this.title=this.props.title || "New Project"
         this.date=this.props.date || undefined
         this.secondaryTitle=this.props.secondaryTitle || undefined
+        this.collapsible=this.props.collapsible || false
         this.state = {
-          collapsed: this.props.collapsed || false
+          collapsed: (this.props.collapsed === undefined) ? true : this.props.collapsed
         }
     }
 
     render(){
         return (            
             <div className="project-container">
-                <div className={`project-content${this.state.collapsed ? ' collapsed' : ''}`}>
+                <div className={`project-content${this.collapsible && this.state.collapsed ? ' collapsed' : ''}`}>
                     {this.renderContent()}
                 </div>
                 { 
-                  this.state.collapsed
-                    ? <label 
-                        onClick={() => this.expandContent()}
-                        className="hover-pointer"
-                        >show more...</label>
-                    : <></>
+                  this.collapsible 
+                    ? this.state.collapsed
+                      ? <label 
+                          onClick={() => this.expandContent()}
+                          className="hover-pointer expand-collapse"
+                          >show more...</label>
+                      : <label 
+                          onClick={() => this.collapseContent()}
+                          className="hover-pointer expand-collapse"
+                          >^^^</label>
+                    :<></>
                 }
             </div>
         )
@@ -80,6 +86,12 @@ class Project extends React.Component {
     expandContent(){
       this.setState({
         collapsed: false
+      })
+    }
+
+    collapseContent(){
+      this.setState({
+        collapsed: true
       })
     }
 }
