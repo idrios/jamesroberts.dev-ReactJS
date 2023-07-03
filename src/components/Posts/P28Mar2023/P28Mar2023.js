@@ -23,7 +23,7 @@ export default class P28Mar2023 extends Post{
               scripts on <em>my page</em> that I had nothing to do with! 
             </p>
             <p>
-              I hadn't realized until now that this was how tracking scripts functioned. I didn't 
+              I hadn't realized until now that this was something tracking scripts could do. I didn't 
               know that a cookie could just run on just any webpage. I was furious and ready to go to war 
               with cookies. 
             </p>
@@ -61,6 +61,14 @@ export default class P28Mar2023 extends Post{
             </p>
             <p className='remark'>
               DuckDuckGo, if you're reading this, please teach me how you block cookies. 
+            </p>
+            <p>
+              <i>
+                Edit: After some reading, I learned that, no, tracking scripts cannot run on other websites without 
+                the site owner's permission. Checking the network tab in my browser's devtools also confirms that 
+                these scripts are not actually being loaded on my webpage, so it seems that I was just encountering 
+                a visual bug with my adblocker. I'm going to continue working on WordFall for my website anyway. 
+              </i>
             </p>
         </div>
         ); 

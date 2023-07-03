@@ -12,9 +12,8 @@ class ProjectsPage extends Page {
     renderContentBody(){
         return (
             <>
-              <PhoneToDesktopSync/>
               <JamesRobertsDotDev/>
-              <NaiaSoftworks collapsible={true}/>
+              <PhoneToDesktopSync collapsible={true}/>
               <SlimeControl collapsible={true}/>
               <WordFall collapsible={true}/>
               <SpaceCube collapsible={true}/>

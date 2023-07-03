@@ -7,17 +7,17 @@ import { _7Oct2021, P28Mar2023 } from '../../Posts/Posts';
 
 
 class PostsPage extends Page {
-    constructor(props){
-        super(props);
-        this.pageName = PAGE_NAMES.POSTS;
-    }
-    renderContentBody(){
-        return (
-            <div>
-                <P28Mar2023/>
-            </div>
-        );
-    }
+  constructor(props){
+    super(props);
+    this.pageName = PAGE_NAMES.POSTS;
+  }
+  renderContentBody(){
+    return (
+      <div>
+        <P28Mar2023/>
+      </div>
+    );
+  }
 }
 
 export default PostsPage; 
