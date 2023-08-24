@@ -2,7 +2,7 @@
   padding: 1rem ;
   margin: 1rem; 
   border-radius: 1rem;
-  background-color: #bdbddddd;
+  background-color: var(--body-overlay-color);
 }
 
 .post-content {

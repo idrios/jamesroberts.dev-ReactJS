@@ -6,6 +6,10 @@
     justify-content: space-between;
 }
 
+.page-container-color-correction{
+  filter: var(--page-color-filter); 
+}
+
 .page-content {
     width: 100%;
 }
@@ -19,62 +23,120 @@
   background-size: 100%;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(230, 230, 255, 0.5)
+      var(--page-gradient-primary),
+      var(--page-gradient-secondary)
     ),
     url('../../../res/images/background-about.svg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
+  filter: var(--page-color-filter); 
+  --svg-filter: var(--about-svg-filter)
 }
 
 .background-default{
   background-size: 100%;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(230, 230, 255, 0.5)
+      var(--page-gradient-primary),
+      var(--page-gradient-secondary)
     ),
     url('../../../res/images/background-404.svg');
   background-repeat: no-repeat;
   background-position-y: bottom;
+  filter: var(--page-color-filter);
+  --svg-filter: var(--default-svg-filter)
 }
 
 .background-home{
   background-size: 100%;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(230, 230, 255, 0.5)
+      var(--page-gradient-primary),
+      var(--page-gradient-secondary)
     ),
     url('../../../res/images/background-home.svg');
   background-repeat: no-repeat;
   background-position-x: left;
   background-position-y: bottom;
+  filter: var(--page-color-filter);
+  --svg-filter: var(--home-svg-filter)
 }
 
 .background-posts{
   background-size: 100%;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(230, 230, 255, 0.5)
+      var(--page-gradient-primary),
+      var(--page-gradient-secondary)
     ),
     url('../../../res/images/background-posts.svg');
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;  
+  filter: var(--page-color-filter);
+  --svg-filter: var(--posts-svg-filter)
 }
 
 .background-projects{
   background-size: 100%;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5),
-      rgba(230, 230, 255, 0.5)
+      var(--page-gradient-primary),
+      var(--page-gradient-secondary)
     ),
     url('../../../res/images/background-projects.svg');
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
+  filter: var(--page-color-filter);
+  --svg-filter: var(--projects-svg-filter)
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-gradient-primary: rgba(255, 255, 255, 0.5);
+    --page-gradient-secondary: rgba(230, 230, 255, 0.5);
+    --page-color-filter: none; 
+    --default-svg-filter: none; 
+    --home-svg-filter: none; 
+    --posts-svg-filter: none; 
+    --projects-svg-filter: none; 
+    --about-svg-filter: none; 
+  }
+}
+
+:root.light {
+  --page-gradient-primary: rgba(255, 255, 255, 0.5);
+  --page-gradient-secondary: rgba(230, 230, 255, 0.5);
+  --page-color-filter: none;  
+  --default-svg-filter: none; 
+  --home-svg-filter: none; 
+  --posts-svg-filter: none; 
+  --projects-svg-filter: none; 
+  --about-svg-filter: none; 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-gradient-primary: rgba(255, 255, 255, 0.5);
+    --page-gradient-secondary: rgba(255, 255, 200, 0.5);
+    --page-color-filter: invert(100%); 
+    --default-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(-360deg);
+    --home-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(200deg);
+    --posts-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(100deg);
+    --projects-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(300deg);
+    --about-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(360deg);
+  }
+}
+
+:root.dark {
+  --page-gradient-primary: rgba(255, 255, 255, 0.5);
+  --page-gradient-secondary: rgba(255, 255, 200, 0.5);
+  --page-color-filter: invert(100%); 
+  --default-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(-360deg);
+  --home-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(200deg);
+  --posts-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(100deg);
+  --projects-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(300deg);
+  --about-svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(360deg);
 }

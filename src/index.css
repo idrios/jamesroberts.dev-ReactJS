@@ -1,4 +1,60 @@
+/*
+ * Themes implemented using this idea from stackoverflow
+ * https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting 
+ */
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-font-color: #000;
+    --accent-font-color: #333;
+    --hyperlink-unclicked-color: #44b;
+    --body-background-color: #fff;
+    --body-overlay-color: #bdbddddd;
+    --body-overlay-color-2: rgba(248, 248, 255, 0.75); 
+    --body-overlay-accent-color: #dd8888dd; 
+    --svg-filter-prev: invert(0%);
+    --svg-filter: invert(0%);
+  }
+}
+
+:root.light {
+  --main-font-color: #000;
+  --accent-font-color: #333;
+  --hyperlink-unclicked-color: #44b;
+  --body-background-color: #fff;
+  --body-overlay-color: #bdbddddd;
+  --body-overlay-color-2: rgba(248, 248, 255, 0.75); 
+  --body-overlay-accent-color: #dd8888dd; 
+  --svg-filter: invert(0%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-color: rgb(227, 227, 227);
+    --accent-font-color: rgb(202, 202, 202);
+    --hyperlink-unclicked-color: rgb(206, 110, 189);
+    --body-background-color: #334;
+    --body-overlay-color: #393970dd;
+    --body-overlay-color-2: #181833cc; 
+    --body-overlay-accent-color: #882222dd;
+    --svg-filter-prev: invert(48%) sepia(79%) saturate(2476%) hue-rotate(-160deg);
+    --svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(200deg);
+  }
+}
+
+:root.dark {
+  --main-font-color: rgb(227, 227, 227);
+  --accent-font-color: rgb(202, 202, 202);
+  --hyperlink-unclicked-color: rgb(206, 110, 189);
+  --body-background-color: #334;
+  --body-overlay-color: #393970dd;
+  --body-overlay-color-2: #181833cc; 
+  --body-overlay-accent-color: #882222dd;
+  --svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(200deg);
+}
+
 body {
+  color: var(--main-font-color);
+  background-color: var(--body-background-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -47,7 +103,7 @@ p{
 }
 
 a{
-  color: #44b;
+  color: var(--hyperlink-unclicked-color);
   text-decoration: none;
 }
 
@@ -71,29 +127,45 @@ a{
 
 .post-date{
   font-size: 16px; 
-  color: #444;
+  color:  var(--accent-font-color);
   margin: 0 0 0.2rem 0;
   font-weight: normal;
 }
 
 .project-date{
   font-size: 18px;
-  color: #444;
+  color:  var(--accent-font-color);
   margin: 0 0 0.2rem 0;
   font-weight: normal;
 }
 
 .secondary-title{
-  color: #444;
+  color: var(--accent-font-color);
   font-style: italic;
   font-weight: normal;
   font-size: 16px;
   margin-bottom: 0.3rem;
 }
 
+.svg-icon{
+  filter: var(--svg-filter);
+}
+
+.svg-animate{
+  animation: 4s changeSvgColors forwards;
+}
+
 .remark{
-  color: #444;
   font-style: italic;
   font-size: 16px;
   margin: 1rem 0;
+}
+
+@keyframes changeSvgColors {
+  0% {
+    filter: var(--svg-filter-prev)
+  }
+  100% {
+    filter: var(--svg-filter)
+  }
 }

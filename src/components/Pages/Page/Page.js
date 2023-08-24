@@ -22,7 +22,7 @@ class Page extends Component {
     render(){
         return (            
             <div className={"page-container background-"+this.pageName.toLowerCase()}>
-                <div>
+                <div className="page-container-color-correction">
                     <Header pageSrc={this.pageName} visible={this.showHeader}/>
                     <div className="page-content">
                         {this.renderContent()}

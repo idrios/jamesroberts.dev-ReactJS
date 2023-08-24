@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core'; 
 import { PAGE_NAMES } from '../../../res/constants/constants'; 
 import SiteTitleSVG from '../../../res/images/site-title.svg'; 
+import {
+  setSvgFilterPrevCssPropertyToCurrentSvgFilterCssProperty, 
+  toggleTheme
+} from '../../../providers/theme'; 
 
 import './Header.css'; 
 
@@ -11,11 +15,27 @@ class Header extends Component {
         super(props);
         this.visible = this.props.visible; 
         this.pageSrc = this.props.pageSrc;
-        this.showThemes = this.props.showThemes; 
+        this.showThemes = true; 
     }
 
     componentDidMount(){
         document.getElementById(this.pageSrc)?.focus(); 
+    }
+
+    componentWillUnmount(){
+      try{
+        setSvgFilterPrevCssPropertyToCurrentSvgFilterCssProperty()
+      }
+      catch(e){
+        console.error(`svg-related error :: ${e.message}`)
+      }
+    }
+
+    toggleTheme = () => {
+      toggleTheme()
+      console.log(getCurrentTheme())
+      console.log(this.state.theme == "dark")
+      this.setState({theme: getCurrentTheme()})
     }
 
     render(){
@@ -24,7 +44,7 @@ class Header extends Component {
             : (
             <div className="header">
                 <div className="header-content-top large-screen-hidden">
-                    <img src={SiteTitleSVG}/>
+                    <img className="svg-icon svg-animate" src={SiteTitleSVG}/>
                 </div>
                 <div className="header-content-bottom">
                     <div className="header-content-left">
@@ -65,12 +85,13 @@ class Header extends Component {
                             >About</Button>
                     </div>
                     <div className="header-content-center small-screen-hidden">
-                        <img src={SiteTitleSVG}/>
+                        <img className="svg-icon svg-animate" src={SiteTitleSVG}/>
                     </div>
                     <div className="header-content-right">
                       {
                       this.showThemes
                         ? <Button
+                              onClick={toggleTheme}
                               id={"themes"}
                               onKeyDown={ev => {
                                   if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.ABOUT).focus()}
@@ -79,11 +100,10 @@ class Header extends Component {
                           : <></>        
                       }
                     </div>
-                </div>                    
+                </div>            
             </div>
         )
     }
 }
-  
 
 export default Header; 

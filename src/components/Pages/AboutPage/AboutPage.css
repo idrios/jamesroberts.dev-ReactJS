@@ -1,5 +1,5 @@
 .about {
     padding: 1rem;
-    background-color: rgba(248, 248, 255, 0.75);
+    background-color: var(--body-overlay-color-2);
     border-radius: 0.25rem;
 }

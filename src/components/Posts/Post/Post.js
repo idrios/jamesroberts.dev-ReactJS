@@ -1,9 +1,6 @@
 import React from 'react';
 import './Post.css';
 
-/**
- * A post has a required prop called "config" with all optional parameters "title", "date", and "content" 
- */
 class Post extends React.Component {
     constructor(props){
         super(props); 

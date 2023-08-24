@@ -2,7 +2,7 @@
   padding: 0;
   margin: 1rem; 
   border-radius: 1rem;
-  background-color: #bdbddddd;
+  background-color: var(--body-overlay-color);
 }
 
 .collapsed{
@@ -18,7 +18,7 @@
 .expand-collapse {
 	display: block;
 	border-radius: 0 0 1rem 1rem;
-	background-color: #dd8888dd;
+	background-color: var(--body-overlay-accent-color);
 	padding: 0.3rem 0 0.3rem 2rem;
 }
 
