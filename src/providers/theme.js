@@ -11,7 +11,7 @@ export const lightTheme = createTheme({
 
 export const darkTheme = createTheme({
   palette: {
-    primary: deepPurple
+    primary: indigo
   },
 })
 
