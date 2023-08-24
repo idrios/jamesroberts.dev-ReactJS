@@ -36,7 +36,7 @@
     --body-overlay-color: #393970dd;
     --body-overlay-color-2: #181833cc; 
     --body-overlay-accent-color: #882222dd;
-    --svg-filter-prev: invert(48%) sepia(79%) saturate(2476%) hue-rotate(-160deg);
+    --svg-filter-prev: invert(48%) sepia(79%) saturate(2476%) hue-rotate(200deg);
     --svg-filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(200deg);
   }
 }
