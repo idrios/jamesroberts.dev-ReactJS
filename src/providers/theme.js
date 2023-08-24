@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import { ThemeProvider, createTheme } from '@material-ui/core/styles';
-import { green, purple, red, orange } from '@material-ui/core/colors';
+import { createTheme } from '@mui/material/styles';
+import { indigo, deepPurple} from '@mui/material/colors';
 
 const callbacks = Array(() => {})
 
 export const lightTheme = createTheme({
   palette: {
-    primary: green,
-    secondary: purple,
+    primary: indigo
   },
 });
 
 export const darkTheme = createTheme({
   palette: {
-    primary: red,
-    secondary: orange,
+    primary: deepPurple
   },
 })
 

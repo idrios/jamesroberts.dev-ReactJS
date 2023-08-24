@@ -1,7 +1,7 @@
-import React, { Component, useState } from 'react'; 
+import React, { Component } from 'react'; 
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'; 
 import { Home, About, Posts, Projects, FourZeroFour } from './Pages/Pages'; 
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { getCurrentTheme, lightTheme, darkTheme, onThemeToggle, offThemeToggle } from '../providers/theme';
 
 class App extends Component {
@@ -17,24 +17,13 @@ class App extends Component {
     onThemeToggle(this.themeToggleCb)
   }
 
-  componentDidUpdate(){
-    console.log("Updated:: " + this.state.theme)
-  }
-
   componentWillUnmount(){
     offThemeToggle(this.themeToggleCb)
   }
 
-  getTheme(){
-    console.log("getting theme")
-    let theme =  this.state.theme == "dark" ? darkTheme : lightTheme
-    console.log(theme.palette.primary)
-    return theme
-  }
-
   render() {
     return (
-      <ThemeProvider theme={this.getTheme()}>
+      <ThemeProvider theme={this.state.theme == "dark" ? darkTheme : lightTheme}>
         <BrowserRouter>
           <Switch>
             <Route exact path='/' 

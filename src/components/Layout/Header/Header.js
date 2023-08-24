@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
-import { Link } from 'react-router-dom'; 
-import { Button } from '@material-ui/core'; 
+import { Link } from 'react-router-dom';  
+import Button from '@mui/material/Button';
 import { PAGE_NAMES } from '../../../res/constants/constants'; 
 import SiteTitleSVG from '../../../res/images/site-title.svg'; 
 import {
@@ -33,8 +33,6 @@ class Header extends Component {
 
     toggleTheme = () => {
       toggleTheme()
-      console.log(getCurrentTheme())
-      console.log(this.state.theme == "dark")
       this.setState({theme: getCurrentTheme()})
     }
 
@@ -50,7 +48,7 @@ class Header extends Component {
                     <div className="header-content-left">
                         <Button component={ Link } to="/" 
                             id={PAGE_NAMES.HOME}
-                            color={this.pageSrc===PAGE_NAMES.HOME ? "primary" : "default"}
+                            color={this.pageSrc===PAGE_NAMES.HOME ? "primary" : "inherit"}
                             variant={this.pageSrc===PAGE_NAMES.HOME ? "contained" : "text"}
                             onKeyDown={ev => {
                                 if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.POSTS).focus()}
@@ -58,7 +56,7 @@ class Header extends Component {
                             >Home</Button>
                         <Button component={ Link } to="/posts"
                             id={PAGE_NAMES.POSTS}
-                            color={this.pageSrc===PAGE_NAMES.POSTS ? "primary" : "default"}
+                            color={this.pageSrc===PAGE_NAMES.POSTS ? "primary" : "inherit"}
                             variant={this.pageSrc===PAGE_NAMES.POSTS ? "contained" : "text"}
                             onKeyDown={ev => {
                                 if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.HOME).focus(); 
@@ -67,7 +65,7 @@ class Header extends Component {
                             >Posts</Button>
                         <Button component={ Link } to="/projects"
                             id={PAGE_NAMES.PROJECTS}
-                            color={this.pageSrc==="projects" ? "primary" : "default"}
+                            color={this.pageSrc==="projects" ? "primary" : "inherit"}
                             variant={this.pageSrc==="projects" ? "contained" : "text"}
                             onKeyDown={ev => {
                                 if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.POSTS).focus(); 
@@ -76,7 +74,7 @@ class Header extends Component {
                             >Projects</Button>
                         <Button component={ Link } to="/about"
                             id={PAGE_NAMES.ABOUT}
-                            color={this.pageSrc==="about" ? "primary" : "default"}
+                            color={this.pageSrc==="about" ? "primary" : "inherit"}
                             variant={this.pageSrc==="about" ? "contained" : "text"}
                             onKeyDown={ev => {
                                 if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.PROJECTS).focus(); 
@@ -93,6 +91,8 @@ class Header extends Component {
                         ? <Button
                               onClick={toggleTheme}
                               id={"themes"}
+                              color={"inherit"}
+                              variant={"text"}
                               onKeyDown={ev => {
                                   if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.ABOUT).focus()}
                               }

@@ -1,7 +1,9 @@
 import React from 'react'
 
 import { MathComponent } from 'mathjax-react';
-import { Button, TextField, Slider } from '@material-ui/core'
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Slider from '@mui/material/Slider';
 import Post from '../Post/Post';
 import Circle from './Circle';
 import CircleRightTriangle from './CircleRightTriangle'; 
