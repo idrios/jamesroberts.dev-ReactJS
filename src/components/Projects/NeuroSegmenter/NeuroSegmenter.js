@@ -29,48 +29,32 @@ export default class NeuroSegmenter extends Project{
           </p>
           <br/>
           <p>
-            I did not produce usable results. I also fried my computer while running my machine learning 
-            algorithm. You won't find my name on the CREMI leaderboard, but I did manage to recover my files
-            from my hard drive, so I still came out a winner. 
+            I didn't produce a working algorithm, so you won't find my name on the CREMI leaderboard.
           </p>
-          <br/>
           <p>
-            While reflecting on the challenge, I came to a few conclusions.
+            If you've taken a machine learning or deep learning course, there's a decent chance you've run
+            into the <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST dataset</a>, a massive collection 
+            of hand-written numbers that is often used for introducing the concept of computer vision. I had 
+            a program that could learn the different numbers from labeled images, and then make predictions 
+            about what it thought the number in unlabeled images might be represented. It was a very standard, 
+            generic intro-to-computer-vision algorithm. I haphazardly threw this algorithm against the CREMI 
+            3D image volume (or rather, I ran the algorithm against every 2D cross-section in the 3D volume) and
+            it just.. didn't make sense to do that. One of the challenges of this problem was that images were
+            in 3D rather than 2D. But that issue was minor compared to the much more fundamental challenge 
+            that neurons are amorphous. The algorithm I was running was good for classifying shapes, and I was
+            basically asking it to look at an image of spaghetti noodles and untangle them. 
           </p>
-            <ul><li><i>I needed to define better parameters</i></li></ul>
-            <p>
-              At its core, all that a machine learning algorithm does is solve the problem of: "given some
-              massive collection of X inputs, what's the probability of Y output". I had tried to reuse the
-              code from my intro ML course that recognizes numbers from a training set of hand drawn images. That
-              code was not really reusable in this context because it was designed for recognizing shapes,
-              and the neurons are amorphous. Still, I was hoping that by just throwing ideas at the wall, 
-              I would start to develop an intuition on how to use ML to segment these 3D images. I felt 
-              that I could have improved the algorithm by passing more filtered image data as inputs; like 
-              thresholding it, or using different convolution filters. But my mental model wasn't quite there. 
-            </p>
-            <ul><li><i>There wasn't enough training data</i></li></ul>
-            <p>
-              There were 3 volumes of training data. While I'm quite certain my algorithm was never going 
-              to be successful at segmenting the rest of the volume set, I believe there must have been a 
-              significant number of situations not reflected by the training set. Mitochondria seemed to often
-              have features that would make it easily mistakeable for a small neuron by an algorithm, or vice versa. Far worse, 
-              one of the other criteria -- "synaptic cleft detection" -- was impossible for <i>me</i> to 
-              distinguish from the training data. I tried searching scientific literature for how to read 3D 
-              volumes of neurosystems, but I failed to find anything useful. This seemed like an area that you needed
-              first-hand experience with, where it's second nature to the labs doing this research and 
-              foreign to outsiders. 
-            </p>
-            <ul><li><i>Machine Learning isn't guaranteed to work and I should abandon this project until I have 
-              better financial stability</i></li></ul>
-            <p>Unlike other aspects of software or engineering, it's hard to know if your approach to 
-              an ML problem will work until you've tried it. I've read someone liken ML to engineering bridges. 
-              In civil engineering, there are various known approaches like using arches of various radii, 
-              using suspension bridges, pillars, etc. But it wasn't until calculus was invented that we could 
-              actually use math to calculate the optimal dimensions of a bridge. Likewise, we don't have any
-              algorithm yet for choosing an optimal ML approach, so it's still a bit more of an art than a 
-              science. I didn't have the right eye for it yet, and in 2016 I needed a job so I didn't have 
-              time to beat my head against the wall fighting failure in this area. 
-            </p>
+          <p>
+            I gave up on the machine learning problem for until I could have a better intuition about it. 
+            Unlike other aspects of software or engineering, it's hard to know if your approach to an ML problem
+            will work until you've tried it. I've read someone liken ML to engineering bridges. 
+            In civil engineering, there are various known approaches like using arches of various radii, 
+            using suspension bridges, pillars, etc. But it wasn't until calculus was invented that we could 
+            actually use math to calculate the optimal dimensions of a bridge. Likewise, we don't have any
+            algorithm yet for choosing an optimal ML approach, so it's still a bit more of an art than a 
+            science. I didn't have the right eye for it yet, and wasn't ready to beat my head against the wall 
+            fighting failure in this area. 
+          </p>
           <br/>
           <img className='neuron-image' src={SegmentPng}/>
           <p className='remark'>Left: neuron vectorized with matlab's 
@@ -85,15 +69,14 @@ export default class NeuroSegmenter extends Project{
           <br/>
           <p>
             I also tried my hand at writing a quick algorithm for converting each of the different neurons into 
-            its own 3D vector. The built-in matlab "isosurface" mesh algorithm is pretty strictly superior to my 
-            attempt, but I think given enough time I could write a better one that focuses on finding local minima
-            and maxima.
+            its own 3D vector. The built-in matlab "isosurface" mesh algorithm is of course more accurate, but I 
+            did end up creating a decent compression algorithm for vectorizing voxel images.
           </p>
           <br/>
           <p>
-            This project posed as the impetus for a number of other projects. The performance issues (from breaking
-            my computer) motivated me to get deeper into how to use a GPU for programming, which did inadvertently lead to 
-            SpaceCube. The limited size of training data motivated me to seek ways to speed up manual 3D volume segmentation, 
+            This project posed as the impetus for a number of other projects. There were performance issues I faced
+            while trying to visualize the data which motivated me to get deeper into how to use a GPU for programming. 
+            The limited size of training data motivated me to seek ways to speed up manual 3D volume segmentation, 
             which has inspired some of my other projects. But I still haven't touched this project at all since 2016. 
           </p>
           <br/>

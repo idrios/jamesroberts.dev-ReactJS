@@ -35,7 +35,7 @@ export default class PhoneToDesktopSync extends Project{
           </p>
           <img className='autoscale' src={VolquilGif}/>
           <p>
-            Together, the two projects show a working proof of concept but the project still has a 
+            Together, the two applications show a working proof of concept but the project still has a 
             significant ways to go. 
           </p>
           <br/>
