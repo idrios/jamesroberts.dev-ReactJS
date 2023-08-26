@@ -15,15 +15,18 @@ class AboutPage extends Page {
             <div className='about'>
                 <h1>About</h1>
                 <p>
-                  I'm a full stack software developer, originally from upstate New York but currently living
-                  in Ohio. I write code with a focus on maintainability, following design principles that keep
-                  a codebase simple to understand and build on. I studied biomedical imaging at Case Western 
-                  and have an interest in building software for the biomedical space, but I enjoy working
-                  on any problem that makes me a better developer. 
+                  I originally learned programming in 2011 as a means of doing computation for biomedical research, 
+                  but I've since learned a number of different languages, frameworks, and paradigms in order to build more 
+                  complex software systems. I write code with a focus on maintainability, following design principles
+                  that keep a codebase simple to understand and build on. I'm particularly interested in building 
+                  software to support biomedical research, but I also enjoy making games, working in education technology, or 
+                  generally at any organization where I can learn new things.  
                 </p>
                 <h1>Contact</h1>
                 <p>
-                  I am currently looking for new projects to work on! Please reach out to me for inquiries. 
+                  I am currently looking for new projects to work on! Please reach out to me for inquiries. I also 
+                  do free consultation, so if you have a project you want to build -- perhaps also an intuition already
+                  about how you want to approach it -- feel free to reach out and ask for another opinion.  
                 </p>
                 <p><b>email</b>: jimroberts10@gmail.com</p>
                 <p>

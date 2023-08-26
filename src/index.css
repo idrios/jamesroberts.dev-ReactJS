@@ -5,7 +5,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --main-font-color: #000;
-    --accent-font-color: #333;
+    --accent-font-color: #335;
     --hyperlink-unclicked-color: #44b;
     --body-background-color: #fff;
     --body-overlay-color: #bdbddddd;
@@ -18,7 +18,7 @@
 
 :root.light {
   --main-font-color: #000;
-  --accent-font-color: #333;
+  --accent-font-color: #335;
   --hyperlink-unclicked-color: #44b;
   --body-background-color: #fff;
   --body-overlay-color: #bdbddddd;
@@ -30,7 +30,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --main-font-color: rgb(227, 227, 227);
-    --accent-font-color: rgb(202, 202, 202);
+    --accent-font-color: rgb(160, 160, 202);
     --hyperlink-unclicked-color: rgb(206, 110, 189);
     --body-background-color: #334;
     --body-overlay-color: #393970dd;
@@ -43,7 +43,7 @@
 
 :root.dark {
   --main-font-color: rgb(227, 227, 227);
-  --accent-font-color: rgb(202, 202, 202);
+  --accent-font-color: rgb(160, 160, 202);
   --hyperlink-unclicked-color: rgb(206, 110, 189);
   --body-background-color: #334;
   --body-overlay-color: #393970dd;
