@@ -12,15 +12,14 @@ class HomePage extends Page {
     renderContentBody(){
         return (      
             <div className='home'>      
-                <h1>Welcome!</h1>
+                <h1>Welcome</h1>
                 <p>
-                  I made this website to show off some of the projects I'm working on and post various
-                  musings. The site is still young, but do come back as I hope to start writing 
-                  blog posts a bit more often. 
+                  I'm a full stack web developer who also knows biomedical stuff. I made this
+                  website to show off some of my projects and talk about things that interest me. 
+                  I enjoy working on projects more than blogging, so expect more of the former. 
                 </p>
-                <br/>
                 <p>
-                  Thanks for visiting and feel free to reach out to me. 
+                  <i>Now in dark mode!</i>
                 </p>
             </div>
         )
