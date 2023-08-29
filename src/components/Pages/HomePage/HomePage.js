@@ -16,7 +16,7 @@ class HomePage extends Page {
                 <p>
                   I'm a full stack web developer who also knows biomedical stuff. I made this
                   website to show off some of my projects and talk about things that interest me. 
-                  I hope some of this is interesting to you too. 
+                  I hope you find some of this interesting as well. 
                 </p>
                 <br/>
                 <h3 className='enthusiastic-text'><i>Now available in dark mode!</i></h3>

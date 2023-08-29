@@ -1,7 +1,7 @@
 import React from 'react'; 
 import Page from '../Page/Page';
 import { PAGE_NAMES } from '../../../res/constants/constants';  
-import ResumePDF from '../../../res/files/james-roberts-resume-APR2023.pdf'
+import ResumePDF from '../../../res/files/james-roberts-resume'
 
 import './AboutPage.css'
 
@@ -25,8 +25,7 @@ class AboutPage extends Page {
                 <h1>Contact</h1>
                 <p>
                   I am currently looking for new projects to work on! Please reach out to me for inquiries. I also 
-                  do free consultation, so if you have a project you want to build -- perhaps also an intuition already
-                  about how you want to approach it -- feel free to reach out and ask for another opinion.  
+                  do free consultation, so feel free to reach out if you're looking for more opinions.  
                 </p>
                 <p><b>email</b>: jimroberts10@gmail.com</p>
                 <p>
