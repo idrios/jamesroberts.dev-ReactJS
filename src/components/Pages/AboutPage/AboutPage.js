@@ -1,7 +1,7 @@
 import React from 'react'; 
 import Page from '../Page/Page';
 import { PAGE_NAMES } from '../../../res/constants/constants';  
-import ResumePDF from '../../../res/files/james-roberts-resume'
+import ResumePDF from '../../../res/files/james-roberts-resume.pdf'
 
 import './AboutPage.css'
 
