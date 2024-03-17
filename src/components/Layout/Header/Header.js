@@ -12,10 +12,7 @@ import './Header.css';
 
 class Header extends Component {
     constructor(props) {
-        super(props);
-        this.visible = this.props.visible; 
-        this.pageSrc = this.props.pageSrc;
-        this.showThemes = true; 
+        super(props); 
     }
 
     componentDidMount(){
@@ -36,8 +33,56 @@ class Header extends Component {
       this.setState({theme: getCurrentTheme()})
     }
 
+    tabs = {
+      home: <Button component={ Link } to="/" 
+        id={PAGE_NAMES.HOME}
+        color={this.props.pageSrc===PAGE_NAMES.HOME ? "primary" : "inherit"}
+        variant={this.props.pageSrc===PAGE_NAMES.HOME ? "contained" : "text"}
+        onKeyDown={ev => {
+            if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.PROJECTS).focus()}
+        }
+        >Home</Button>, 
+      posts: <Button component={ Link } to="/posts"
+        id={PAGE_NAMES.POSTS}
+        color={this.props.pageSrc===PAGE_NAMES.POSTS ? "primary" : "inherit"}
+        variant={this.props.pageSrc===PAGE_NAMES.POSTS ? "contained" : "text"}
+        onKeyDown={ev => {
+            if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.HOME).focus(); 
+            else if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.PROJECTS).focus()}
+        }
+        >Posts</Button>, 
+      projects: <Button component={ Link } to="/projects"
+        id={PAGE_NAMES.PROJECTS}
+        color={this.props.pageSrc==="projects" ? "primary" : "inherit"}
+        variant={this.props.pageSrc==="projects" ? "contained" : "text"}
+        onKeyDown={ev => {
+            if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.HOME).focus(); 
+            else if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.ABOUT).focus()}
+        }
+        >Projects</Button>, 
+      about: <Button component={ Link } to="/about"
+        id={PAGE_NAMES.ABOUT}
+        color={this.props.pageSrc==="about" ? "primary" : "inherit"}
+        variant={this.props.pageSrc==="about" ? "contained" : "text"}
+        onKeyDown={ev => {
+            if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.PROJECTS).focus(); 
+            else if(ev.key === 'ArrowRight') document.getElementById("themes").focus()}
+        }
+        >About</Button>,
+      themes: <Button
+        onClick={toggleTheme}
+        id={"themes"}
+        color={"inherit"}
+        variant={"text"}
+        onKeyDown={ev => {
+            if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.ABOUT).focus()}
+        }
+        >Themes</Button>
+
+    }
+
     render(){
-        return !this.visible 
+        return !this.props.visible 
             ? <></>
             : (
             <div className="header">
@@ -46,59 +91,15 @@ class Header extends Component {
                 </div>
                 <div className="header-content-bottom">
                     <div className="header-content-left">
-                        <Button component={ Link } to="/" 
-                            id={PAGE_NAMES.HOME}
-                            color={this.pageSrc===PAGE_NAMES.HOME ? "primary" : "inherit"}
-                            variant={this.pageSrc===PAGE_NAMES.HOME ? "contained" : "text"}
-                            onKeyDown={ev => {
-                                if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.POSTS).focus()}
-                            }
-                            >Home</Button>
-                        <Button component={ Link } to="/posts"
-                            id={PAGE_NAMES.POSTS}
-                            color={this.pageSrc===PAGE_NAMES.POSTS ? "primary" : "inherit"}
-                            variant={this.pageSrc===PAGE_NAMES.POSTS ? "contained" : "text"}
-                            onKeyDown={ev => {
-                                if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.HOME).focus(); 
-                                else if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.PROJECTS).focus()}
-                            }
-                            >Posts</Button>
-                        <Button component={ Link } to="/projects"
-                            id={PAGE_NAMES.PROJECTS}
-                            color={this.pageSrc==="projects" ? "primary" : "inherit"}
-                            variant={this.pageSrc==="projects" ? "contained" : "text"}
-                            onKeyDown={ev => {
-                                if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.POSTS).focus(); 
-                                else if(ev.key === 'ArrowRight') document.getElementById(PAGE_NAMES.ABOUT).focus()}
-                            }
-                            >Projects</Button>
-                        <Button component={ Link } to="/about"
-                            id={PAGE_NAMES.ABOUT}
-                            color={this.pageSrc==="about" ? "primary" : "inherit"}
-                            variant={this.pageSrc==="about" ? "contained" : "text"}
-                            onKeyDown={ev => {
-                                if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.PROJECTS).focus(); 
-                                else if(ev.key === 'ArrowRight' && this.showThemes) document.getElementById("themes").focus()}
-                            }
-                            >About</Button>
+                        {this.tabs.home}, 
+                        {this.tabs.projects}, 
+                        {this.tabs.about}
                     </div>
                     <div className="header-content-center small-screen-hidden">
                         <img className="svg-icon svg-animate" src={SiteTitleSVG}/>
                     </div>
                     <div className="header-content-right">
-                      {
-                      this.showThemes
-                        ? <Button
-                              onClick={toggleTheme}
-                              id={"themes"}
-                              color={"inherit"}
-                              variant={"text"}
-                              onKeyDown={ev => {
-                                  if(ev.key === 'ArrowLeft') document.getElementById(PAGE_NAMES.ABOUT).focus()}
-                              }
-                          >Themes</Button>
-                          : <></>        
-                      }
+                      {this.tabs.themes}
                     </div>
                 </div>            
             </div>

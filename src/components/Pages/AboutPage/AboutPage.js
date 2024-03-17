@@ -24,8 +24,7 @@ class AboutPage extends Page {
                 </p>
                 <h1>Contact</h1>
                 <p>
-                  I am currently looking for new projects to work on! Please reach out to me for inquiries. I also 
-                  do free consultation, so feel free to reach out if you're looking for more opinions.  
+                  I am currently looking for new projects to work on! Please reach out to me for inquiries.
                 </p>
                 <p><b>email</b>: jimroberts10@gmail.com</p>
                 <p>

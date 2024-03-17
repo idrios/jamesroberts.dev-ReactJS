@@ -15,11 +15,11 @@ class HomePage extends Page {
                 <h1>Welcome</h1>
                 <p>
                   I'm a full stack web developer who also knows biomedical stuff. I made this
-                  website to show off some of my projects and talk about things that interest me. 
-                  I hope you find some of this interesting as well. 
+                  website to show off some of my projects and work on things that interest me.
+                  Someday I might even write essays or browser games. Stay tuned!
                 </p>
                 <br/>
-                <h3 className='enthusiastic-text'><i>Now available in dark mode!</i></h3>
+                <h3 className='enthusiastic-text'><i>Now also in dark mode!</i></h3>
             </div>
         )
     }
