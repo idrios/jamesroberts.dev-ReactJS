@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import { indigo, deepPurple} from '@mui/material/colors';
 
-const callbacks = Array(() => {})
+const callbacks = new Set()
 
 export const lightTheme = createTheme({
   palette: {
@@ -66,11 +66,11 @@ export function toggleTheme() {
 }
 
 export function onThemeToggle(callback) {
-  callbacks.push(callback)
+  callbacks.add(callback)
 }
 
 export function offThemeToggle(callback) {
-  callbacks.remove(callback)
+  callbacks.delete(callback)
 }
 
 export function getCurrentTheme() {

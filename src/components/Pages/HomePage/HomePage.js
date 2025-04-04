@@ -14,12 +14,10 @@ class HomePage extends Page {
             <div className='home'>      
                 <h1>Welcome</h1>
                 <p>
-                  I'm a full stack web developer who also knows biomedical stuff. I made this
-                  website to show off some of my projects and work on things that interest me.
-                  Someday I might even write essays or browser games. Stay tuned!
+                A full stack web developer who also knows biomedical stuff
                 </p>
                 <br/>
-                <h3 className='enthusiastic-text'><i>Now also in dark mode!</i></h3>
+                <h3 className='enthusiastic-text'><i>Thsi site now also in dark mode!</i></h3>
             </div>
         )
     }

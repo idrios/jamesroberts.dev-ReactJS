@@ -1,3 +1,4 @@
+/*
 import React from 'react'
 
 import { MathComponent } from 'mathjax-react';
@@ -205,4 +206,5 @@ export default class P1_11Jul2021 extends Post{
             </p>
         </div>    
     }
-} 
+}
+*/

@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import {select, selectAll} from 'd3-selection';
 import {range} from 'd3-array';
@@ -81,3 +82,4 @@ export default class CircleMason extends React.Component {
         );
     }
 }
+    */
