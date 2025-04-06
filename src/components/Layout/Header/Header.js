@@ -4,7 +4,8 @@ import Button from '@mui/material/Button';
 import { PAGE_NAMES } from '../../../res/constants/constants'; 
 import SiteTitleSVG from '../../../res/images/site-title.svg'; 
 import {
-  setSvgFilterPrevCssPropertyToCurrentSvgFilterCssProperty, 
+  setSvgFilterPrevCssPropertyToCurrentSvgFilterCssProperty,
+  setSvgFilterCurrentCssProperty,
   toggleTheme
 } from '../../../providers/theme'; 
 
@@ -16,7 +17,8 @@ class Header extends Component {
     }
 
     componentDidMount(){
-        document.getElementById(this.pageSrc)?.focus(); 
+        document.getElementById(this.pageSrc)?.focus();
+        setSvgFilterCurrentCssProperty(`--svg-filter-${this.props.pageSrc}`)
     }
 
     componentWillUnmount(){

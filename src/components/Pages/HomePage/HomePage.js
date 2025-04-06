@@ -17,7 +17,7 @@ class HomePage extends Page {
                 A full stack web developer who also knows biomedical stuff
                 </p>
                 <br/>
-                <h3 className='enthusiastic-text'><i>Thsi site now also in dark mode!</i></h3>
+                <h3 className='enthusiastic-text'><i>This site now also in dark mode!</i></h3>
             </div>
         )
     }

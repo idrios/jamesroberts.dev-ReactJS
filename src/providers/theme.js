@@ -25,6 +25,24 @@ export function setSvgFilterPrevCssPropertyToCurrentSvgFilterCssProperty(){
   ) 
 }
 
+export function setSvgFilterCurrentCssProperty(style){
+  document.querySelector(":root").style.setProperty(
+    "--svg-filter", 
+    window.getComputedStyle(document.body).getPropertyValue(style)
+  ) 
+}
+
+export function svgFilterTriggerAnimation(style){
+  document.querySelector(":root").style.setProperty(
+    "--svg-filter-prev", 
+    window.getComputedStyle(document.getElementsByClassName('svg-animate')[0]).filter
+  )
+  document.querySelector(":root").style.setProperty(
+    "--svg-filter", 
+    window.getComputedStyle("")
+  )
+}
+
 export function forceTriggerSvgAnimation(){
   var svgs = document.getElementsByClassName('svg-icon')
   for (let svg of svgs){
