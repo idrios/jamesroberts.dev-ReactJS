@@ -14,9 +14,6 @@ class AboutPage extends Page {
             <div className='about'>
                 <h1>About</h1>
                 <p>
-                  I've been programming since 2011, originally with Java and Matlab learning how to do things related to 
-                  biomedical research, but in 2015 I began self-studying Android development and full stack web development.                  
-
                   I'm a full stack and mobile developer who specializes in Android (Java, Kotlin, or React Native) and web 
                   development (React and vanilla javascript). 
 
@@ -26,8 +23,8 @@ class AboutPage extends Page {
                 <h1>Contact</h1>
                 <p><b>email</b>: jimroberts10@gmail.com</p>
                 <p>
-                  If you're someone I've known before from my travels -- if you're a former coworker, a former student from
-                  when I taught English, an airbnb roommate, WoW guildmate, your name is Clay -- please reach out!
+                  If you're someone I've known before -- if you're a former coworker, a former student from
+                  when I taught English, an airbnb roommate, WoW guildmate, college classmate -- please reach out!
                 </p>
                 <h1>Skills</h1>
                 <p>
